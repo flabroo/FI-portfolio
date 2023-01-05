@@ -1,2 +1,43 @@
-<h1>Fairul Izwan</h1>
-<%= link_to "projects", projects_path %>
+<div class="container">
+  <div class="text-center banner">
+    <h1>Hello World!</h1>
+    <h1>Fairul Izwan</h1>
+    <h2>Aspiring Software Engineer</h2>
+    <ul>
+      <li>Github</li>
+      <li>LinkedIn</li>
+      <li>Email</li>
+      <li>Resume</li>
+    </ul>
+    <p>I love exploring and creating 🚀 I'm a lifelong learner 🎓 and I might have a thing for traditional Neapolitan Pizza 🍕</p>
+  </div>
+
+  <h3>My Skills</h3>
+  <img src="" alt="">
+  <ul>
+    <li>Ruby on Rails</li>
+    <li>Rails</li>
+    <li>SQL</li>
+    <li>Javascript</li>
+    <li>Stimulus</li>
+    <li>HTML</li>
+    <li>CSS</li>
+  </ul>
+  <h4>About me tagline</h4>
+  <p>Summary about self here *Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia consequatur harum perspiciatis maxime at perferendis temporibus modi asperiores repudiandae. Sit adipisci optio ducimus expedita ad quam hic nisi veritatis vitae?*</p>
+  <p>Read more *scroll bar*</p>
+
+  <h3>Projects</h3>
+  <% @projects.each do |project| %>
+    <h4><%= project.role %></h4>
+    <h2><%= project.name %></h2>
+    <p>insert ul>li on stacks</p>
+    <p><%= link_to "View Project", project_path(project) %></p>
+    <p><%= project.summary %></p>
+  <% end %>
+
+  <h3>Open to work, let's have a chat</h3>
+  <p>*Email Address*</p>
+
+  <p>render footer</p>
+</div>

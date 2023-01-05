@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 
   def home
-
+    @projects = Project.all
   end
 
   def index
