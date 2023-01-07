@@ -17,3 +17,22 @@
     color: green;
   }
 }
+
+.home-skills{
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    li {
+      margin-right: 8px;
+      margin-bottom: 4px;
+      width: auto;
+      color: white;
+      background-color: green;
+      padding: 4px 8px;
+    }
+    // li:first-child {
+    //   margin-left: 0;
+    // }
+  }
+}
