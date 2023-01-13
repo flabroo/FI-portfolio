@@ -46,4 +46,17 @@
 
 .home-project {
   margin-bottom: 7rem;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    li {
+      margin-right: 8px;
+      margin-bottom: 4px;
+      width: auto;
+      color: white;
+      background-color: bisque;
+      padding: 4px 8px;
+    }
+  }
 }
