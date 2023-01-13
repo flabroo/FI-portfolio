@@ -7,10 +7,43 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 require "csv"
+require "json"
 
-puts '*** Cleaning up projects ***'
+puts '*** Cleaning up languages/projects ***'
 puts ''
 Project.destroy_all
+Language.destroy_all
+
+puts '*** Seeding database with languages ***'
+puts ''
+
+Language.create(
+  name: "Ruby on Rails"
+)
+
+Language.create(
+  name: "Ruby"
+)
+
+Language.create(
+  name: "SQL"
+)
+
+Language.create(
+  name: "Javascript"
+)
+
+Language.create(
+  name: "Stimulus"
+)
+
+Language.create(
+  name: "HTML"
+)
+
+Language.create(
+  name: "CSS"
+)
 
 puts '*** Seeding database with projects ***'
 puts ''
@@ -18,7 +51,7 @@ puts ''
 filepath = "db/projects.csv"
 
 CSV.foreach(filepath, headers: :first_row) do |row|
-  Project.create(
+  project = Project.create(
     name: row['name'],
     role: row['role'],
     kind: row['type'],
@@ -28,6 +61,12 @@ CSV.foreach(filepath, headers: :first_row) do |row|
     explanation: row['explanation'],
     problems: row['problems']
   )
+  JSON.parse(row['stack']).each do |language_id|
+    stack = Stack.new
+    stack.project = project
+    stack.language = Language.find(language_id)
+    stack.save!
+  end
 end
 
 puts 'Done!'
