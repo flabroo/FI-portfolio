@@ -27,7 +27,8 @@
 
 .home-skills{
   img {
-    width: 80%;
+    width: 100%;
+    object-fit: cover;
   }
   ul {
     display: flex;
@@ -41,6 +42,10 @@
       background-color: bisque;
       padding: 4px 8px;
     }
+  }
+  .skills-card{
+    background-color: hsla(0 , 0, 100%, 0.15);
+    backdrop-filter: blur(30px);
   }
 }
 
