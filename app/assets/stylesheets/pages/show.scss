@@ -1,0 +1,15 @@
+.show {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    li {
+      margin-right: 8px;
+      margin-bottom: 4px;
+      width: fit-content;
+      color: white;
+      background-color: bisque;
+      padding: 4px 8px;
+    }
+  }
+}

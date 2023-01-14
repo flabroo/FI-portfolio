@@ -1,10 +1,55 @@
-<div class="container px-4 px-lg-0 py-5 m-auto">
-  <h1><%= @project.name %></h1>
-  <p><%= @project.role %></p>
+<div class="container px-4 px-lg-0 py-5 m-auto show">
+
+  <!-- Carousel from Bootstrap
+
+  <div id="carouselExample" class="carousel slide w-50 m-auto">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%= image_tag "fairul.jpeg", class: "rounded w-100" %>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "athena.jpeg", class: "rounded w-100" %>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  -->
+
+
+  <div class="show-title d-flex justify-content-between align-items-center mt -5 flex-column flex-lg-row">
+    <h1 class="my-3 text-center text-lg-start"><%= @project.name %></h1>
+    <% if @project.url %>
+      <%= link_to "View Site", @project.url, target: :_blank, class: "btn btn-primary" %>
+    <% else %>
+      <span class="btn btn-secondary">Website Unavailable</span>
+    <% end %>
+  </div>
+  <ul class="m-0 p-0 mb-5 justify-content-center justify-content-lg-start">
+    <% @project.languages.each do |l| %>
+      <li><%= l.name %></li>
+    <% end %>
+  </ul>
+  <p><%= @project.summary.html_safe %></p>
+  <h4 class="mt-5">Tech Stack</h4>
+
+  <h4 class="mt-5">Type</h4>
   <p><%= @project.kind %></p>
-  <p><%= @project.summary %></p>
-  <p>Purpose</p>
+
+  <h4 class="mt-5">Project Purpose and Goal</h4>
   <p><%= @project.purpose %></p>
-  <p>Explanation</p>
+
+  <h4 class="mt-5">Web Stack and Explanation</h4>
   <p><%= @project.explanation %></p>
+
+  <h4 class="mt-5">Problems and Thought Process</h4>
+  <p><%= @project.problems %></p>
+
 </div>
