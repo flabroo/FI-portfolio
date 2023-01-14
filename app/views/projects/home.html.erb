@@ -11,15 +11,15 @@
   </div>
 </div>
 
-<div class="container px-3 px-lg-4 py-5 m-0 mw-100">
+<div class="container px-4 px-lg-0 py-5 m-auto">
 
   <div class="home-skills mb-5">
     <h2>My Skills</h2>
-    <div class="row">
-      <div class="skills-img col-12 col-lg-4 d-flex justify-content-center">
-        <%= image_tag "fairul.jpeg", class: "mb-3 rounded" %>
+    <div class="row shadow rounded border p-2 py-3 skills-card">
+      <div class="skills-img col-12 col-lg-3 d-flex justify-content-center">
+        <%= image_tag "fairul.jpeg", class: "rounded" %>
       </div>
-      <div class="skills-con col-12 col-lg-8 d-flex flex-column justify-content-center">
+      <div class="skills-con col-12 col-lg-9 d-flex flex-column justify-content-center">
         <ul class="p-0 m-0 mb-3 justify-content-center justify-content-lg-start">
           <li>Ruby on Rails</li>
           <li>Ruby</li>
@@ -40,7 +40,7 @@
     <h2>Projects</h2>
     <% @projects.each do |project| %>
       <div class="home-project row">
-        <div class="project-content pe-5 col-12 col-lg-8 order-2 order-lg-1">
+        <div class="project-content pe-5 col-12 col-lg-9 order-2 order-lg-1">
           <h4 class="m-0"><%= project.role %></h4>
           <h3><%= project.name %></h3>
           <ul class="m-0 p-0 my-4">
@@ -51,7 +51,7 @@
           <p class ="mb-5"><%= project.summary %></p>
           <%= link_to "View Project", project_path(project), class: "btn btn-primary" %>
         </div>
-        <div class="project-img col-10 m-auto col-lg-4 order-1 order-lg-2">
+        <div class="project-img col-10 m-auto col-lg-3 order-1 order-lg-2">
           <%= image_tag "fairul.jpeg", class: "mb-3 rounded w-100" %>
         </div>
       </div>
