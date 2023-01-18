@@ -13,14 +13,14 @@
 
 <div class="container px-4 px-lg-0 py-5 m-auto">
 
-  <div class="home-skills mb-5">
+  <div id="about" class="home-skills mb-5">
     <h2>My Skills</h2>
     <div class="row shadow rounded border p-2 py-3 skills-card">
       <div class="skills-img col-12 col-lg-3 d-flex justify-content-center">
         <%= image_tag "fairul.jpeg", class: "rounded" %>
       </div>
-      <div class="skills-con col-12 col-lg-9 d-flex flex-column justify-content-center">
-        <ul class="p-0 m-0 mb-3 justify-content-center justify-content-lg-start">
+      <div class="skills-con col-12 col-lg-9 d-flex flex-column justify-content-evenly">
+        <ul class="p-0 m-0 my-3 justify-content-center justify-content-lg-start">
           <li>Ruby on Rails</li>
           <li>Ruby</li>
           <li>SQL</li>
@@ -29,15 +29,16 @@
           <li>HTML</li>
           <li>CSS</li>
         </ul>
-        <h4>An inspiring Software Developer</h4>
-        <p>Summary about self here *Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia consequatur harum perspiciatis maxime at perferendis temporibus modi asperiores repudiandae. Sit adipisci optio ducimus expedita ad quam hic nisi veritatis vitae?*</p>
-        <p>Read more *scroll bar*</p>
+        <div class="con-text">
+          <h4 class= "text-center text-lg-start">An inspiring Software Developer</h4>
+          <p class= "text-center text-lg-start">I started playing with computers when I was 11 years-old. Since then I have been tinkering with all sorts of technologies that in some way or another led me to work on music, photography, sound engineering, electric engineering, automation, video production, feature film post-production, VR games, and 3D sound.</p>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="home-projects">
-    <h2>Projects</h2>
+    <h2 id="projects">Projects</h2>
     <% @projects.each do |project| %>
       <div class="home-project row">
         <div class="project-content pe-5 col-12 col-lg-9 order-2 order-lg-1">
@@ -49,7 +50,7 @@
             <% end %>
           </ul>
           <p class ="mb-5"><%= project.summary %></p>
-          <%= link_to "View Project", project_path(project), class: "btn btn-primary" %>
+          <%= link_to "View Project", project_path(project), class: "btn border" %>
         </div>
         <div class="project-img col-10 m-auto col-lg-3 order-1 order-lg-2">
           <%= image_tag "fairul.jpeg", class: "mb-3 rounded w-100" %>
@@ -58,6 +59,19 @@
     <% end %>
   </div>
 
-  <h3>Open to work, let's have a chat</h3>
-  <p>*Email Address*</p>
+  <div class="home-contact d-flex flex-column align-items-center mb-5">
+    <h2 class="text-center">I'm open to work, let's have a chat!</h2>
+    <div class="contact-icons d-flex justify-content-evenly">
+      <%= mail_to "izwanrul11@gmail.com" do %>
+        <i class="fa-solid fa-3x fa-envelope fa-fw"></i>
+      <% end %>
+      <%= link_to "tel:+6597269434" do %>
+        <i class="fa-solid fa-3x fa-phone fa-fw"></i>
+      <% end %>
+      <%= link_to "https://wa.me/6597269434" do %>
+        <i class="fa-3x fa-brands fa-square-whatsapp fa-fw"></i>
+      <% end %>
+    </div>
+  </div>
+
 </div>

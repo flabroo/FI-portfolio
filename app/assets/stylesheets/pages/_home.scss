@@ -5,8 +5,8 @@
     list-style: none;
     li {
       margin-left: 1rem;
-      height: 3rem;
-      width: 3rem;
+      height: 3.5rem;
+      width: 3.5rem;
       display: grid;
       place-items: center;
       // padding: 0.5rem;
@@ -28,7 +28,9 @@
 .home-skills{
   img {
     width: 100%;
+    height: 300px;
     object-fit: cover;
+    object-position: top;
   }
   ul {
     display: flex;
@@ -63,5 +65,21 @@
       background-color: bisque;
       padding: 4px 8px;
     }
+  }
+}
+
+.home-contact {
+  h2 {
+    border: 0;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    &:hover{
+      color: beige;
+    }
+  }
+  .contact-icons {
+    width: 50vw;
   }
 }
