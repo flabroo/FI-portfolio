@@ -1,13 +1,13 @@
-<div class="min-vh-100 d-flex flex-column justify-content-center px-4 px-lg-5 banner">
+<div class="min-vh-100 d-flex flex-column justify-content-center px-4 px-lg-5 banner text-center">
   <h1 class="m-0">Hello World!</h1>
-  <h1 class="mb-4">I'm Fairul Izwan | Software Engineer</h1>
-  <ul class="p-0 mb-4">
-    <li><i class="fa-brands fa-2xl fa-square-github"></i></li>
-    <li><i class="fa-brands fa-2xl fa-linkedin"></i></li>
-    <li><i class="fa-solid fa-2xl fa-envelope"></i></li>
-  </ul>
-  <div class="row">
-    <p class="col-12 col-lg-6">I love exploring and creating 🚀 I'm a lifelong learner 🎓 and I might have a thing for traditional Neapolitan Pizza 🍕</p>
+  <h1 class="mb-4">I'm <span class="gradient-text">Fairul Izwan</span>  | Software Engineer</h1>
+  <div class="row justify-content-center">
+    <ul class="p-0 mb-4 col-12 justify-content-center">
+      <li><i class="fa-brands fa-2xl fa-square-github"></i></li>
+      <li><i class="fa-brands fa-2xl fa-linkedin"></i></li>
+      <li><i class="fa-solid fa-2xl fa-envelope"></i></li>
+    </ul>
+    <p class="col-12 col-lg-7">I love exploring and creating 🚀 I'm a lifelong learner 🎓 and I might have a thing for traditional Neapolitan Pizza 🍕</p>
   </div>
 </div>
 
@@ -49,8 +49,8 @@
               <li><%= l.name %></li>
             <% end %>
           </ul>
-          <p class ="mb-5"><%= project.summary %></p>
-          <%= link_to "View Project", project_path(project), class: "btn border" %>
+          <p class ="mb-5"><%= project.summary.html_safe %></p>
+          <%= link_to "View Project", project_path(project), class: "btn-main" %>
         </div>
         <div class="project-img col-10 m-auto col-lg-3 order-1 order-lg-2">
           <%= image_tag "fairul.jpeg", class: "mb-3 rounded w-100" %>
