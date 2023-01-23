@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "projects#home"
+  get "about", to: "projects#about"
 
   resources :projects
 end
