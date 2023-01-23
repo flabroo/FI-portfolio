@@ -3,7 +3,8 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  // font-size: 3.5rem;
+  // font-size: 8vw;
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
   color: bisque;
@@ -45,17 +46,17 @@ p {
 }
 
 .gradient-text{
-  animation: background-pan 3s linear infinite;
-  background: linear-gradient(
-    to right,
-    darkblue,
-    blue,
-    cyan,
-    darkblue
-  );
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  white-space: nowrap;
+  // animation: background-pan 3s linear infinite;
+  // background: linear-gradient(
+  //   to right,
+  //   darkblue,
+  //   blue,
+  //   cyan,
+  //   darkblue
+  // );
+  // background-size: 200%;
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  // white-space: nowrap;
   font-family: 'Lobster', cursive;
 }
