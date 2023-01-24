@@ -2,6 +2,9 @@
   background-color: transparent;
   min-height: 60vh;
   padding-top: 12vh;
+  .subheader {
+    margin-top: -12px;
+  }
   ul {
     display: flex;
     list-style: none;
@@ -82,6 +85,6 @@
     }
   }
   .contact-icons {
-    width: 50vw;
+    width: 70vw;;
   }
 }
