@@ -25,6 +25,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_13_151417) do
     t.string "role"
     t.string "kind"
     t.string "url"
+    t.string "logo_path"
+    t.string "pic_folder"
     t.text "summary"
     t.text "purpose"
     t.text "explanation"

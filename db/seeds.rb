@@ -56,6 +56,8 @@ CSV.foreach(filepath, headers: :first_row) do |row|
     role: row['role'],
     kind: row['type'],
     url: row['url'],
+    logo_path: row['logo_path'],
+    pic_folder: row['pic_folder'],
     summary: row['summary'],
     purpose: row['purpose'],
     explanation: row['explanation'],

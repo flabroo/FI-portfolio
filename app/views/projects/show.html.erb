@@ -7,10 +7,10 @@
     <div id="carouselExample" class="carousel slide w-50 m-auto">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <%= image_tag "fairul.jpeg", class: "rounded w-100" %>
+          <%= image_tag "", class: "rounded w-100" %>
         </div>
         <div class="carousel-item">
-          <%= image_tag "athena.jpeg", class: "rounded w-100" %>
+          <%= image_tag "", class: "rounded w-100" %>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -53,5 +53,37 @@
     <h4>Problems and Thought Process</h4>
     <%= @project.problems.html_safe %>
   </div>
+
+  <div id="carouselExample" class="carousel slide m-auto bg-dark">
+    <div class="carousel-inner">
+      <% @images_path.each_with_index do |path, index| %>
+        <% if index == 0 %>
+          <div class="carousel-item active">
+            <%= image_tag path, class: "d-block w-100" %>
+          </div>
+        <% else %>
+          <div class="carousel-item">
+            <%= image_tag path, class: "d-block w-100" %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon dark" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!--
+  <div class="project-photos container row">
+    <% @images_path.each do |path| %>
+      <%= image_tag path, class: "rounded project-photo col-12 col-lg-4" %>
+    <% end %>
+  </div>
+  -->
 
 </div>
