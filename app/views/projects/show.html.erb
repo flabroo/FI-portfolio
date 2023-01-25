@@ -2,30 +2,6 @@
 
 <div class="bg-white px-4 px-lg-0 py-5 m-auto showpage">
   <div class="container">
-    <!-- Carousel from Bootstrap
-
-    <div id="carouselExample" class="carousel slide w-50 m-auto">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <%= image_tag "", class: "rounded w-100" %>
-        </div>
-        <div class="carousel-item">
-          <%= image_tag "", class: "rounded w-100" %>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-
-    -->
-
-
     <div class="show-title d-flex justify-content-between align-items-center mt -5 flex-column flex-lg-row">
       <h1 class="my-2 text-center text-lg-start"><%= @project.name %></h1>
       <% if @project.url %>
@@ -77,13 +53,5 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-
-  <!--
-  <div class="project-photos container row">
-    <% @images_path.each do |path| %>
-      <%= image_tag path, class: "rounded project-photo col-12 col-lg-4" %>
-    <% end %>
-  </div>
-  -->
 
 </div>
