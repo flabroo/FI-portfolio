@@ -15,7 +15,7 @@
       display: grid;
       place-items: center;
       // padding: 0.5rem;
-      border: 0.1rem solid black;
+      border: 0.1rem solid #EDEBD7;
       border-radius: 50%;
     }
     li:first-child {
@@ -24,9 +24,10 @@
   }
   p {
     font-size: 1.5rem;
+    text-shadow: #EDEBD7 1px 0 2px;
   }
   i {
-    color: bisque;
+    color: #EDEBD7;
   }
 }
 
@@ -46,10 +47,15 @@
       margin-bottom: 4px;
       width: auto;
       color: white;
-      background-color: bisque;
+      background-color: #b56576;
       padding: 4px 8px;
     }
   }
+
+  h3 {
+    font-size: 24px;
+  }
+
   .skills-card{
     background-color: hsla(0 , 0, 100%, 0.15);
     backdrop-filter: blur(30px);
@@ -67,10 +73,13 @@
       margin-bottom: 4px;
       width: auto;
       color: white;
-      background-color: bisque;
+      background-color: #b56576;
       padding: 4px 8px;
     }
   }
+   p {
+    margin-bottom: 16px;
+   }
 }
 
 .home-contact {
@@ -81,7 +90,7 @@
     text-decoration: none;
     color: black;
     &:hover{
-      color: beige;
+      color: #2A4494;
     }
   }
   .contact-icons {

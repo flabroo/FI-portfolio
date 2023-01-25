@@ -8,13 +8,23 @@
       margin-bottom: 4px;
       width: fit-content;
       color: white;
-      background-color: bisque;
+      background-color: #b56576;
       padding: 4px 8px;
+    }
+  }
+  .link-btn {
+    background-color: #BBD2C5;
+    border: 0;
+    &:hover {
+      background-color: #122C34;
     }
   }
   h4 {
     margin-top: 56px;
     // margin-bottom: 0px;
     font-size: 32px;
+  }
+  strong {
+    color: #b56576;
   }
 }
