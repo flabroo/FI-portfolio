@@ -20,5 +20,16 @@
  @import "components/index";
 
  body {
-  background-image: linear-gradient(to bottom right, #BBD2C5, #536976, #292E49);
+  background-image: linear-gradient(to bottom right, #BBD2C5, #536976, #292E49, #BBD2C5);
+  background-size: 400%;
+  animation: bg-move 7s ease-in-out infinite alternate;
+ }
+
+ @keyframes bg-move {
+    0% {
+      background-position: left;
+    }
+    100% {
+      background-position: right;
+    }
  }
