@@ -27,31 +27,31 @@
 
 
     <div class="show-title d-flex justify-content-between align-items-center mt -5 flex-column flex-lg-row">
-      <h1 class="my-3 text-center text-lg-start"><%= @project.name %></h1>
+      <h1 class="my-2 text-center text-lg-start"><%= @project.name %></h1>
       <% if @project.url %>
         <%= link_to "View Site", @project.url, target: :_blank, class: "btn btn-primary" %>
       <% else %>
-        <span class="btn btn-secondary">Website Unavailable</span>
+        <span class="btn btn-secondary my-2">Website Unavailable</span>
       <% end %>
     </div>
-    <ul class="m-0 p-0 mb-5 justify-content-center justify-content-lg-start">
+    <ul class="m-0 my-2 p-0 mb-5 justify-content-center justify-content-lg-start">
       <% @project.languages.each do |l| %>
         <li><%= l.name %></li>
       <% end %>
     </ul>
-    <p><%= @project.summary.html_safe %></p>
+    <%= @project.summary.html_safe %>
 
-    <h4 class="mt-5">Type</h4>
-    <p><%= @project.kind %></p>
+    <h4>Type</h4>
+    <%= @project.kind.html_safe %>
 
-    <h4 class="mt-5">Project Purpose and Goal</h4>
-    <p><%= @project.purpose %></p>
+    <h4>Project Purpose and Goal</h4>
+    <%= @project.purpose.html_safe %>
 
-    <h4 class="mt-5">Web Stack and Explanation</h4>
-    <p><%= @project.explanation %></p>
+    <h4>Web Stack and Explanation</h4>
+    <%= @project.explanation.html_safe %>
 
-    <h4 class="mt-5">Problems and Thought Process</h4>
-    <p><%= @project.problems %></p>
+    <h4>Problems and Thought Process</h4>
+    <%= @project.problems.html_safe %>
   </div>
 
 </div>
