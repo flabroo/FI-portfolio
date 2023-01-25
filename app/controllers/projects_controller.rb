@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 
   def home
-    @projects = Project.all
+    @projects = Project.all.sort { |project| project.id }
   end
 
   def about
