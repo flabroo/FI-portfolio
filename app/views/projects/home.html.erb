@@ -3,9 +3,24 @@
   <h1 class="mb-4 display-1 fw-bold subheader">I'm <span class="gradient-text">Fairul Izwan</span></h1>
   <div class="row justify-content-center">
     <ul class="p-0 mb-4 col-12 justify-content-center">
-      <li><i class="fa-brands fa-2xl fa-square-github"></i></li>
-      <li><i class="fa-brands fa-2xl fa-linkedin"></i></li>
-      <li><i class="fa-solid fa-2xl fa-envelope"></i></li>
+
+      <li>
+        <%= link_to "https://github.com/flabroo", target: :_blank, class: "icon" do %>
+          <i class="fa-brands fa-2xl fa-square-github"></i>
+        <% end %>
+      </li>
+
+      <li>
+        <%= link_to "https://www.linkedin.com/in/fairul-izwan/", target: :_blank, class: "icon" do %>
+          <i class="fa-brands fa-2xl fa-linkedin"></i>
+        <% end %>
+      </li>
+
+      <li>
+        <%= mail_to "izwanrul11@gmail.com", target: :_blank, class: "icon" do %>
+          <i class="fa-solid fa-2xl fa-envelope"></i>
+        <% end %>
+      </li>
     </ul>
     <p class="col-12 col-lg-7">I love developing web applications and solving the next problem. And the occasional chai latte ☕️</p>
   </div>
