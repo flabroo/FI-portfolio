@@ -68,7 +68,7 @@ p {
   }
 }
 
-.gradient-text{
+.gradient-text {
   // animation: background-pan 3s linear infinite;
   // background: linear-gradient(
   //   to right,
@@ -81,6 +81,38 @@ p {
   // -webkit-background-clip: text;
   // -webkit-text-fill-color: transparent;
   // white-space: nowrap;
+  text-shadow: none;
   font-family: 'Lobster', cursive;
-  color: #b56576;
+  // color: #b56576;
+  color: transparent;
+  background: conic-gradient(
+    #d9d7f1 12%,
+    #baabda 12%,
+    #baabda 33%,
+    #e7fbbe 33%,
+    #e7fbbe 55%,
+    #ffcbcb 55%,
+    #ffcbcb 70%,
+    #b5deff 70%,
+    #b5deff 87%,
+    #f7d1ba 87%
+    );
+  background-size: auto 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  // animation: rotate-rev 0.5s ease forwards;
+  cursor: pointer;
+  &:hover {
+    animation: shine 8s linear infinite;
+  }
+}
+
+@keyframes shine {
+  from {
+    background-position: center 0;
+  }
+  to {
+    background-position: center 200%;
+  }
 }
