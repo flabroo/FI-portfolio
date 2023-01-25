@@ -28,3 +28,32 @@
     color: #b56576;
   }
 }
+.project-photos {
+  .project-photo {
+    // width: 100%;
+  }
+}
+
+.carousel {
+  height: 50vw;
+  aspect-ratio: 16 / 9;
+  width: auto;
+  img {
+    height: inherit;
+  }
+  border: 1px black solid;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item {
+  height: 100%;
+  img {
+    object-fit: contain;
+  }
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  filter: invert(43%) sepia(53%) saturate(479%) hue-rotate(297deg) brightness(95%) contrast(74%);;
+}

@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 
   def home
-    @projects = Project.all.sort { |project| project.id }
+    @projects = Project.all.sort_by(&:id)
   end
 
   def about
@@ -13,6 +13,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    @images_path = Dir.glob("app/assets/images/#{@project.pic_folder}/*").map { |path| "#{@project.pic_folder}/#{File.basename(path)}" }
   end
 
   def download_cv

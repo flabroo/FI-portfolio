@@ -5,6 +5,8 @@ class CreateProjects < ActiveRecord::Migration[7.0]
       t.string :role
       t.string :kind
       t.string :url
+      t.string :logo_path
+      t.string :pic_folder
       t.text :summary
       t.text :purpose
       t.text :explanation
