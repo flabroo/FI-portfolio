@@ -6,9 +6,23 @@
   <div class="footer-contact">
     <h4 class="text-center">Get in touch</h4>
     <ul class="p-0 m-0 justify-content-center">
-      <li><i class="fa-brands fa-2xl fa-square-github"></i></li>
-      <li><i class="fa-brands fa-2xl fa-linkedin"></i></li>
-      <li><i class="fa-solid fa-2xl fa-envelope"></i></li>
+      <li>
+        <%= link_to "https://github.com/flabroo", target: :_blank do %>
+          <i class="fa-brands fa-2xl fa-square-github"></i>
+        <% end %>
+      </li>
+
+      <li>
+        <%= link_to "https://www.linkedin.com/in/fairul-izwan/", target: :_blank do %>
+          <i class="fa-brands fa-2xl fa-linkedin"></i>
+        <% end %>
+      </li>
+
+      <li>
+        <%= mail_to "izwanrul11@gmail.com", target: :_blank do %>
+          <i class="fa-solid fa-2xl fa-envelope"></i>
+        <% end %>
+      </li>
     </ul>
   </div>
 </div>
