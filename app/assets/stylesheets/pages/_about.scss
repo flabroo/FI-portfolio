@@ -1,12 +1,26 @@
-.about {
-  p {
-    margin-bottom: 24px;
+.about-wave {
+  margin-top: -24px;
+  filter: drop-shadow(0 -4px 14px rgba(0, 0, 0, 0.4));
+  position: relative;
+  z-index: -1;
+}
+
+.aboutpage {
+  margin-top: -0.5px !important;
+  strong {
+    color: #b56576;
   }
-  .subheader {
-    margin: 48px 0 0 0;
-  }
-  li {
-    font-size: 1.2rem;
-    font-weight: 100;
+  .about {
+    p {
+      margin-bottom: 24px;
+    }
+    .subheader {
+      margin: 48px 0 0 0;
+      color: #b56576;
+    }
+    li {
+      font-size: 1.2rem;
+      font-weight: 100;
+    }
   }
 }
