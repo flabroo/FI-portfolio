@@ -1,4 +1,12 @@
+.show-wave {
+  margin-top: -24px;
+  filter: drop-shadow(0 -4px 14px rgba(0, 0, 0, 0.4));
+  position: relative;
+  z-index: -1;
+}
+
 .showpage {
+  margin-top: -0.5px !important;
   ul {
     display: flex;
     flex-wrap: wrap;
