@@ -30,6 +30,7 @@ gem "jbuilder"
 gem "sassc-rails"
 gem 'pry-byebug'
 gem "font-awesome-sass", "~> 6.1"
+gem "dotenv-rails", groups: [:development, :test]
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
