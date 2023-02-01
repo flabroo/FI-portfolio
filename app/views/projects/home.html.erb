@@ -80,17 +80,14 @@
       <% end %>
     </div>
 
-    <div class="home-contact mb-5">
+    <div class="home-contact mb-5 container">
       <h2 class="text-center mx-auto">I'm open to work, let's have a chat!</h2>
 
       <%= form_with url: "/bot_message", method: :post do |f| %>
-        <%= f.label "Name" %>
-        <%= f.text_field :name %>
-        <%= f.label "Email" %>
-        <%= f.text_field :email %>
-        <%= f.label "Your Message" %>
-        <%= f.text_field :message %>
-        <%= f.submit :Send %>
+        <%= f.text_field :name, placeholder: "Name" %>
+        <%= f.text_field :email, placeholder: "Email Address" %>
+        <%= f.text_field :message, placeholder: "Message" %>
+        <%= f.submit :Send, class: "input-submit" %>
       <% end %>
 
       <!--
@@ -111,5 +108,3 @@
   </div>
 
 </div>
-
-<%= button_to "click me", bot_message_path %>
