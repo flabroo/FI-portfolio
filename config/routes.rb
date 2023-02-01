@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root "projects#home"
   get "about", to: "projects#about"
   get 'download_cv', to: "projects#download_cv"
+  post 'bot_message', to: "projects#bot_message"
 
   resources :projects
 end

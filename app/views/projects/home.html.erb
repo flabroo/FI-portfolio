@@ -80,8 +80,21 @@
       <% end %>
     </div>
 
-    <div class="home-contact d-flex flex-column align-items-center mb-5">
-      <h2 class="text-center">I'm open to work, let's have a chat!</h2>
+    <div class="home-contact mb-5">
+      <h2 class="text-center mx-auto">I'm open to work, let's have a chat!</h2>
+
+      <%= form_with url: "/bot_message", method: :post do |f| %>
+        <%= f.label "Name" %>
+        <%= f.text_field :name %>
+        <%= f.label "Email" %>
+        <%= f.text_field :email %>
+        <%= f.label "Your Message" %>
+        <%= f.text_field :message %>
+        <%= f.submit :Send %>
+      <% end %>
+
+      <!--
+
       <div class="contact-icons d-flex justify-content-evenly">
         <%= mail_to "izwanrul11@gmail.com" do %>
           <i class="fa-solid fa-3x fa-envelope fa-fw"></i>
@@ -93,7 +106,10 @@
           <i class="fa-3x fa-brands fa-square-whatsapp fa-fw"></i>
         <% end %>
       </div>
+      -->
     </div>
   </div>
 
 </div>
+
+<%= button_to "click me", bot_message_path %>

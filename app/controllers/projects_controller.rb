@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  require 'open-uri'
 
   def home
     @projects = Project.all.sort_by(&:id)
@@ -18,5 +19,11 @@ class ProjectsController < ApplicationController
 
   def download_cv
     send_file "#{Rails.root}/public/docs/Fairul-CV.pdf", type: "application/pdf", x_sendfile: true
+  end
+
+  def bot_message
+    message = "Hello! You have a new inquiry.%0A*Name*: #{params[:name]}%0A*Email*: #{params[:email]}%0A*Message*: #{params[:message]}"
+
+    URI.open("https://api.telegram.org/bot#{ENV['TELEGRAM_BOT_API']}/sendMessage?chat_id=#{ENV['TELEGRAM_CHAT_ID']}&parse_mode=Markdown&text=#{message}")
   end
 end
