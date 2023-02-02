@@ -83,7 +83,13 @@
     <div class="home-contact mb-5 container">
       <h2 class="text-center mx-auto">I'm open to work, let's have a chat!</h2>
 
-      <%= form_with url: "/bot_message", method: :post do |f| %>
+      <% flash.each do |type, msg| %>
+        <div class="alert alert-success m-auto">
+          <%= msg %>
+        </div>
+      <% end %>
+
+      <%= form_with url: "/bot_message", method: :post, id: "bottom-form" do |f| %>
         <%= f.text_field :name, placeholder: "Name" %>
         <%= f.text_field :email, placeholder: "Email Address" %>
         <%= f.text_field :message, placeholder: "Message" %>
