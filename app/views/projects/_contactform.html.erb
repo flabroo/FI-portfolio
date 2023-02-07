@@ -1,0 +1,8 @@
+<div data-contact-form-target="alert"></div>
+
+<%= form_with url: "/bot_message", method: :post, id: "bottom-form", data: { action: "submit->contact-form#send", contact_form_target: "form" } do |f| %>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_field :email, placeholder: "Email Address" %>
+  <%= f.text_field :message, placeholder: "Message" %>
+  <%= f.submit :Send, class: "input-submit" %>
+<% end %>

@@ -22,8 +22,21 @@ class ProjectsController < ApplicationController
   end
 
   def bot_message
-    message = "Hello! You have a new inquiry.%0A*Name*: #{params[:name]}%0A*Email*: #{params[:email]}%0A*Message*: #{params[:message]}"
+    @checker = params[:name].present? || params[:email].present? || params[:message].present?
 
-    URI.open("https://api.telegram.org/bot#{ENV['TELEGRAM_BOT_API']}/sendMessage?chat_id=#{ENV['TELEGRAM_CHAT_ID']}&parse_mode=Markdown&text=#{message}")
+    if @checker
+      message = "Hello! You have a new inquiry.%0A*Name*: #{params[:name]}%0A*Email*: #{params[:email]}%0A*Message*: #{params[:message]}"
+
+      URI.open("https://api.telegram.org/bot#{ENV['TELEGRAM_BOT_API']}/sendMessage?chat_id=#{ENV['TELEGRAM_CHAT_ID']}&parse_mode=Markdown&text=#{message}")
+    end
+
+    # flash.now[:notice] = "Message Submitted!"
+    # render :home, status: :ok, locals: { projects: Project.all.sort_by(&:id) }
+    respond_to do |f|
+      f.html
+      f.json
+    end
+
+    # redirect_to root_path(@projects, anchor: 'bottom-form'), data: { turbo: false }, notice: 'Thank you for the message!'
   end
 end
