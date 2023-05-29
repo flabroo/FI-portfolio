@@ -17,6 +17,7 @@ module FIPortfolio
     # in config/environments, which are processed later.
     #
     config.hosts << /[a-z0-9\-]+\.up\.railway\.app/
+    config.hosts << 'fairulizwan.dev'
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
   end
