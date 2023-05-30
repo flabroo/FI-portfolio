@@ -1,7 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fairul Izwan</title>
+    <title><%= "#{@project.name} | " if @project %>Fairul Izwan</title>
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Fairul Izwan | Software Developer">
+    <meta name="description" content="I love developing web applications and solving the next problem. And the occasional chai latte :)">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://https://fairulizwan.dev/">
+    <meta property="og:title" content="Fairul Izwan | Software Developer">
+    <meta property="og:description" content="I love developing web applications and solving the next problem. And the occasional chai latte :)">
+    <meta property="og:image" content="<%= asset_path('GHPP.jpg') %>">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://https://fairulizwan.dev/">
+    <meta property="twitter:title" content="Fairul Izwan | Software Developer">
+    <meta property="twitter:description" content="I love developing web applications and solving the next problem. And the occasional chai latte ☕️">
+    <meta property="twitter:image" content="<%= asset_path('GHPP.jpg') %>">
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
