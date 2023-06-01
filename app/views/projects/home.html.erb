@@ -30,7 +30,7 @@
 
 <div class="px-4 px-lg-0 py-5 m-auto bg-white home-section">
   <div class="container">
-    <div id="about" class="home-skills mb-5">
+    <div id="about" class="section home-skills mb-5">
       <h2>About Me</h2>
       <div class="row shadow rounded border p-2 py-3 skills-card">
         <div class="skills-img col-12 col-lg-3 d-flex justify-content-center">
@@ -56,7 +56,7 @@
       </div>
     </div>
 
-    <div class="home-projects">
+    <div class="section home-projects">
       <h2 id="projects">Projects</h2>
       <% @projects.each do |project| %>
         <div class="home-project row">
@@ -80,7 +80,7 @@
       <% end %>
     </div>
 
-    <div data-controller="contact-form" class="home-contact mb-5 container">
+    <div data-controller="contact-form" class="section home-contact mb-5 container">
       <h2 class="text-center mx-auto">I'm open to work, let's have a chat!</h2>
 
       <%= render "contactform" %>
