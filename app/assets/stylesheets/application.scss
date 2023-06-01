@@ -35,4 +35,14 @@
 
  .bg-white {
   background-color: #fafafa !important;
- }
+}
+
+ ::selection {
+  background-color: #0b30272b;
+  color: #0b3027;
+}
+
+::-moz-selection {
+  background-color: #0b30272b;
+  color: #0b3027;
+}
