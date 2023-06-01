@@ -4,12 +4,9 @@ body {
 }
 
 h1 {
-  // font-size: 3.5rem;
-  // font-size: 8vw;
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
   color: #122C34;
-  // -webkit-text-stroke: 1px white;
   text-shadow: white 1px 0 2px;
 }
 
@@ -23,10 +20,13 @@ h2 {
   width: fit-content;
   color: #122C34;
   transition: background-size 1s ease;
-  // word-break: keep-all;
-  // white-space: nowrap;
+}
+
+.section {
   &:hover {
-    background-size: 100% 3px;
+    h2 {
+      background-size: 100% 3px;
+    }
   }
 }
 
@@ -69,21 +69,8 @@ p {
 }
 
 .gradient-text {
-  // animation: background-pan 3s linear infinite;
-  // background: linear-gradient(
-  //   to right,
-  //   darkblue,
-  //   blue,
-  //   cyan,
-  //   darkblue
-  // );
-  // background-size: 200%;
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
-  // white-space: nowrap;
   text-shadow: none;
   font-family: 'Lobster', cursive;
-  // color: #b56576;
   color: transparent;
   background: conic-gradient(
     #d9d7f1 12%,
@@ -101,7 +88,6 @@ p {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  // animation: rotate-rev 0.5s ease forwards;
   cursor: pointer;
   animation: shine 8s linear infinite;
 }
