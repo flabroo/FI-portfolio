@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
-  root 'projects#home'
-  get 'about', to: 'projects#about'
-  get 'fairul_izwan_cv', to: 'projects#fairul_izwan_cv'
-  post 'bot_message', to: 'projects#bot_message'
+  # Pages
+  root 'pages#home'
+  get 'about', to: 'pages#about', as: :about
 
-  resources :projects
+  # Files/API calls
+  get 'fairul_izwan_cv', to: 'files#fairul_izwan_cv', as: :cv
+  post 'bot_message', to: 'projects#bot_message', as: :bot_message
+
+  # Errors
+  match '/404', to: 'errors#not_found', via: :all
+  match '/500', to: 'errors#internal_server_error', via: :all
+
+  resources :projects, only: %i[show]
 end

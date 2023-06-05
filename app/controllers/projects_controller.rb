@@ -1,29 +1,9 @@
 class ProjectsController < ApplicationController
   require 'open-uri'
 
-  def home
-    @projects = Project.all.sort_by(&:id)
-  end
-
-  def about
-  end
-
-  def index
-    @projects = Project.all
-  end
-
   def show
     @project = Project.find(params[:id])
     @images_path = Dir.glob("app/assets/images/#{@project.pic_folder}/*").map { |path| "#{@project.pic_folder}/#{File.basename(path)}" }
-  end
-
-  def fairul_izwan_cv
-    send_file(
-      "#{Rails.root}/public/docs/Fairul-CV.pdf",
-      filename: "Fairul-CV.pdf",
-      type: "application/pdf",
-      disposition: "inline"
-    )
   end
 
   def bot_message
@@ -35,13 +15,9 @@ class ProjectsController < ApplicationController
       URI.open("https://api.telegram.org/bot#{ENV['TELEGRAM_BOT_API']}/sendMessage?chat_id=#{ENV['TELEGRAM_CHAT_ID']}&parse_mode=Markdown&text=#{message}")
     end
 
-    # flash.now[:notice] = "Message Submitted!"
-    # render :home, status: :ok, locals: { projects: Project.all.sort_by(&:id) }
     respond_to do |f|
       f.html
       f.json
     end
-
-    # redirect_to root_path(@projects, anchor: 'bottom-form'), data: { turbo: false }, notice: 'Thank you for the message!'
   end
 end
