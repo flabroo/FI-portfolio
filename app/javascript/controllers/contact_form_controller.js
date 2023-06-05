@@ -5,9 +5,8 @@ export default class extends Controller {
   static targets = ["form", "alert"]
   connect() {
     console.log("Hello from contact controller");
-    console.log(this.formTarget);
-    console.log(this.alertTarget);
   }
+
   send(e) {
     e.preventDefault()
     console.log("running send");
