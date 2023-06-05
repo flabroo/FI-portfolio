@@ -36,8 +36,12 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
+    <% unless ["/404", "/500"].include?(request.path) %>
+      <%= render "shared/navbar" %>
+    <% end %>
     <%= yield %>
-    <%= render "shared/footer" %>
+    <% unless ["/404", "/500"].include?(request.path) %>
+      <%= render "shared/footer" %>
+    <% end %>
   </body>
 </html>
